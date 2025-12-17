@@ -1,0 +1,13 @@
+<button (click)="getData()" >get data</button>
+@for(user of userdata;track user.id){
+    <ul>
+        <li>name : {{user.name}}</li>
+        <li>username : {{user.username}}</li>
+        <li>email : {{user.email}}</li>
+    </ul>
+}
+
+
+<router-outlet />
+
+
