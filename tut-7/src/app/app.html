@@ -1,0 +1,10 @@
+@for(user of userData;track user.id){
+  <ul>
+    <li>{{user.id}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.age}}</li>
+    <button (click)="deleteUser(user.id)">delete user</button>
+  </ul>
+}
+<router-outlet />
