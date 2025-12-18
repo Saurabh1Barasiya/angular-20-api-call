@@ -1,0 +1,12 @@
+<input type="text" [(ngModel)]="serchText" (input)="getFilterData()" />
+@for(user of userFilteredData;track user.id){
+<div class="">
+    <span>{{user.id}} --  </span>
+    <span>{{user.name}} -- </span>
+    <span>{{user.email}} --  </span>
+    <span>{{user.age}}  </span>
+</div>
+
+}
+
+<router-outlet />
