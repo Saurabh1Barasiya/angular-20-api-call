@@ -1,0 +1,25 @@
+<input
+  type="text"
+  placeholder="Search user..."
+  [(ngModel)]="searchText"
+  (input)="onSearchChange()"
+/>
+
+<hr>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.age }}</td>
+  </tr>
+</table>
+
+
+<router-outlet />
