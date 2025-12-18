@@ -1,0 +1,11 @@
+<button (click)="getPost()">get</button>
+
+@for(item of post;track item.id){
+  <ul>
+    <li>id -- {{item.id}}</li>
+    <li>title --{{item.title}}</li>
+    <li>body --{{item.body}}</li>
+  </ul>
+}
+
+<router-outlet />
