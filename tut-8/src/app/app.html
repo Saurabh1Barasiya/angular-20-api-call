@@ -1,0 +1,20 @@
+<!-- app.component.html -->
+
+<input
+  type="text"
+  placeholder="Search by name or email"
+  [(ngModel)]="searchText"
+  (input)="filterUsers()"
+/>
+
+<hr />
+
+<ul>
+  <li *ngFor="let user of filteredUsers">
+    <b>{{ user.name }}</b> - {{ user.email }} ({{ user.age }})
+  </li>
+</ul>
+
+
+
+<router-outlet />
