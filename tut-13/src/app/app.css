@@ -1,0 +1,23 @@
+.parent{
+    /* background-color: red; */
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    gap:1rem
+}
+
+.parent li{
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+table{
+    border: 3px solid black;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+td,th{
+    border:2px solid black;
+}

@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>age</th>
+  </thead>
+  <tbody>
+    @for(user of paginationData;track user.id){
+    <tr class="">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.age}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+
+<!-- @for(user of paginationData;track user.id){
+  <ul class="parent">
+    <li>{{user.id}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.age}}</li>
+  </ul>
+} -->
+
+<button (click)="previous()" [disabled]="page==1">prev</button>
+<span>{{page}}</span>
+<button (click)="nextData()" [disabled]="page === totelPages">next</button>
+
+<router-outlet />
