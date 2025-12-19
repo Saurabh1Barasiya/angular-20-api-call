@@ -1,0 +1,17 @@
+@for(user of userData;track user.id){
+  <ul>
+    <li>{{user.id}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.age}}</li>
+  </ul>
+}
+
+
+<button (click)="prev()" [disabled]="page === 1">prev</button>
+<span>{{page}}</span>
+<button (click)="next()" [disabled]="isNextDisabled">next</button>
+
+<router-outlet />
+
+
