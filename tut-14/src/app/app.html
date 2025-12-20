@@ -1,0 +1,8 @@
+<p>child data : {{data}}</p>
+<app-child 
+  [name]="parentName"
+  [age]="parentAge"
+  [address]="parentAddress" 
+  (message)="reciveData($event)">
+</app-child>
+<router-outlet />

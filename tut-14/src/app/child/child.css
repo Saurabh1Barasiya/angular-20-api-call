@@ -1,0 +1,13 @@
+.child-comp{
+    border: 1px solid red;
+    background-color: black;
+    color: azure;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.data{
+    width: 50%;
+    /* background-color: aqua; */
+    margin: auto;
+}
