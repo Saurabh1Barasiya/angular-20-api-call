@@ -1,0 +1,12 @@
+@for(item of products;track item.id){
+  <ul>
+    <li>{{item.id}}</li>
+    <li>{{item.category}}</li>
+    <li>{{item.description|slice:0:10}}</li>
+     <li>{{item.price}}</li>
+     <li>{{item.rating}}</li>
+     <li>{{item.stock}}</li>
+     <li>{{item.title}}</li>
+  </ul>
+}
+<router-outlet />
