@@ -1,0 +1,50 @@
+<!-- <input type="text" 
+[(ngModel)]="searchString"
+placeholder="search user"
+(input)="liveSearch()"
+>
+
+@for(user of filteredData;track $index){
+  <p>{{user.firstName}} -- {{user.lastName}} -- {{user.email}} -- {{user.address}}</p>
+}@empty{
+  <h1>List of all users...</h1>
+} -->
+
+
+<div class="search-container">
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <input 
+      type="text"
+      [(ngModel)]="searchString"
+      placeholder="🔍 Search user..."
+      (input)="liveSearch()"
+    />
+  </div>
+
+  <!-- Results -->
+  <div class="results">
+
+    @for(user of filteredData; track $index){
+      <div class="card">
+        <h3>{{user.firstName}} {{user.lastName}}</h3>
+        <p>📧 {{user.email}}</p>
+        <p>📍 {{user.address}}</p>
+      </div>
+    }
+
+    @empty{
+      <div class="empty">
+        <h2>No users found 😕</h2>
+        <p>Try searching something else</p>
+      </div>
+    }
+
+  </div>
+
+</div>
+
+<router-outlet />
+
+<router-outlet />
