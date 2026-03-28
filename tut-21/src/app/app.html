@@ -1,0 +1,61 @@
+<!-- <h1>All users data...</h1>
+@for(user of paginatedData;track $index){
+<ul [ngStyle]="{'display':'flex','justify-content':'space-between'}">
+  <li [ngStyle]="{'list-style':'none'}">{{$index+1}}</li>
+  <li [ngStyle]="{'list-style':'none'}">{{user.firstName}}</li>
+  <li [ngStyle]="{'list-style':'none'}">{{user.lastName}}</li>
+  <li [ngStyle]="{'list-style':'none'}">{{user.email}}</li>
+  <li [ngStyle]="{'list-style':'none'}">{{user.address}}</li>
+</ul>
+}
+
+<button (click)="previousPage()" [disabled]="page === 1">Previous</button>
+{{page}}
+<button (click)="nextPage()" [disabled]="page === totelPages">Next</button> -->
+
+
+<h1 class="title">All Users Data</h1>
+
+<div class="table-container">
+  <div class="table-header">
+    <span>#</span>
+    <span>First Name</span>
+    <span>Last Name</span>
+    <span>Email</span>
+    <span>Address</span>
+  </div>
+
+  @for(user of paginatedData; track $index){
+  <div class="table-row">
+    <span>{{$index + 1}}</span>
+    <span>{{user.firstName}}</span>
+    <span>{{user.lastName}}</span>
+    <span>{{user.email}}</span>
+    <span>{{user.address}}</span>
+  </div>
+  }
+</div>
+
+<div class="pagination">
+  <button (click)="previousPage()" [disabled]="page === 1">
+    ⬅ Previous
+  </button>
+
+  <span class="page-number">Page {{page}}</span>
+
+
+  <button (click)="nextPage()" [disabled]="page === totelPages">
+    Next ➡
+  </button>
+
+  @for(p of paginationArray;track $index){
+    <button (click)="goToPage(p)">{{p}}</button>
+  }
+
+</div>
+
+<router-outlet />
+
+
+
+<router-outlet />

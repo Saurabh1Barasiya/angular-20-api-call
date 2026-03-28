@@ -1,0 +1,94 @@
+/* Title */
+.title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Container */
+.table-container {
+  width: 90%;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.table-header {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 2fr 2fr;
+  background: #4CAF50;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Rows */
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 2fr 2fr;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+
+  /* animation */
+  animation: fadeIn 0.4s ease-in-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover animation */
+.table-row:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #f9f9f9;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  gap: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Page number */
+.page-number {
+  font-weight: bold;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
